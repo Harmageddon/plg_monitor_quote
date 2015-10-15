@@ -11,9 +11,16 @@
 	<authorUrl>www.zweiiconkram.de</authorUrl>
 	<version>0.0.1</version>
 	<description>PLG_CONTENT_MONITORQUOTE_XML_DESCRIPTION</description>
+
 	<files>
 		<filename plugin="monitorquote">monitorquote.php</filename>
+		<folder plugin="monitorquote">layouts</folder>
 	</files>
+
+	<media destination="plg_content_monitorquote" folder="media">
+		<folder>js</folder>
+	</media>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
