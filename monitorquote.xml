@@ -28,4 +28,11 @@
 			</fieldset>
 		</fields>
 	</config>
+
+	<languages folder="language">
+		<language tag="de-DE">de-DE/de-DE.plg_content_monitorquote.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_content_monitorquote.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_monitorquote.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_monitorquote.sys.ini</language>
+	</languages>
 </extension>
