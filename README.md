@@ -9,7 +9,7 @@ This [Joomla!](https://www.joomla.org) content plugin adds functionality to inse
 
 ## Installation
 
-* [Download](https://github.com/Harmageddon/plg_monitorquote/releases) the latest release.
+* [Download](https://github.com/Harmageddon/plg_monitor_quote/releases) the latest release.
 * Install it on your web site.
 * Enable the plugin.
 
