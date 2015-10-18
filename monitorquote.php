@@ -44,8 +44,6 @@ class PlgContentMonitorQuote extends JPlugin
 			return null;
 		}
 
-		var_dump($context);
-
 		$allowed_contexts = array('com_monitor.comment', 'plg_monitorcontributions.comment');
 
 		if (!in_array($context, $allowed_contexts))
