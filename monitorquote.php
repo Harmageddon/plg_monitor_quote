@@ -118,6 +118,14 @@ class PlgContentMonitorQuote extends JPlugin
 			return null;
 		}
 
+		// Check for permission.
+		$user = JFactory::getUser();
+
+		if (!$user->authorise('comment.edit', 'com_monitor') && !$user->authorise('comment.edit.own', 'com_monitor'))
+		{
+			return null;
+		}
+
 		$script = JHtml::_('script', 'plg_content_monitorquote/monitor_quote.js', false, true, true);
 
 		if (!$script)
