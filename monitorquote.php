@@ -44,7 +44,9 @@ class PlgContentMonitorQuote extends JPlugin
 			return null;
 		}
 
-		$allowed_contexts = array('com_monitor.comment');
+		var_dump($context);
+
+		$allowed_contexts = array('com_monitor.comment', 'plg_monitorcontributions.comment');
 
 		if (!in_array($context, $allowed_contexts))
 		{
@@ -59,7 +61,16 @@ class PlgContentMonitorQuote extends JPlugin
 
 		$regex = "/\{quote\=(.*?)\,(\d*)\.(\d*)\}(.*?)\{\/quote\}/";
 
-		$item->text = preg_replace_callback($regex, 'PlgContentMonitorQuote::replace', $item->text);
+		// Replace quotes with their HTML markup when viewing comments in the normal context.
+		if ($context === 'com_monitor.comment')
+		{
+			$item->text = preg_replace_callback($regex, 'PlgContentMonitorQuote::replace', $item->text);
+		}
+		// Else, strip the quotes.
+		else
+		{
+			$item->text = preg_replace($regex, '', $item->text);
+		}
 	}
 
 	/**
